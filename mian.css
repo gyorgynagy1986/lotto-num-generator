@@ -184,3 +184,102 @@ span {
     color: var(--cbt);
 }
 
+@media only screen and (max-width: 791px) {
+   
+    .section-content {
+        flex-direction: column;
+        align-items:  center;
+    }
+
+    .nav img {
+        display: none;
+    }
+
+    .nav{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1rem;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .my-num {
+       display: none;
+    }
+    
+    .btn, .btn-clear {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        height: 35px;
+        background: var(--cbt);
+    
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: var(--ctxt);
+    }
+
+    .btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    
+    
+  }
+
+
+  @media only screen and (max-width: 600px) {
+   
+  
+    .btn-container {
+        width: auto;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .btn, .btn-clear {
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    
+  }
+
+
+  @media only screen and (max-width: 494px) {
+   
+    .yourNumber {
+        width: 100%;
+        max-width: 30px;
+       
+    }
+
+    .root-container {
+        margin-right: 5%;
+        margin-left: 5% ;
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 380px) {
+   
+  
+   
+    .root-container {
+        backdrop-filter: unset;    
+    
+    }
+    
+    
+  }

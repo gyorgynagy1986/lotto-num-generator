@@ -2,7 +2,7 @@
 
 :root {
     --f1: 'Inter', sans-serif;
-    --cb: rgba(35, 49, 99, 0.8);
+    --cb: #47578E;
     --ctxt: #FFFFFF;
     --cbt: #47578E;
 
@@ -13,6 +13,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-rendering: optimizeSpeed;
+    text-rendering: optimizeLegibility;
 }
 
 
@@ -43,7 +45,10 @@ line-height: 44px;
 letter-spacing: -0.05em;
 text-transform: uppercase;
 
-color: var(--cb)
+color: var(--cb);
+
+  
+
 }
 
 
@@ -52,8 +57,7 @@ color: var(--cb)
     max-width: 1256px;
     height: 60px;
     margin-inline: auto;
-    background: rgba(215, 236, 255, 0.9);
-    filter: blur(0.5px);
+    background: rgb(215, 236, 255);
     border-radius: 100px;
     align-items: center;
     display: flex;
@@ -117,6 +121,10 @@ color: var(--cb)
     margin-bottom: 40.6px;
 }
 
+input:focus{
+    outline: none;
+}
+
 .yourNumber {
     width: 45px;
     border: none;
@@ -127,7 +135,6 @@ color: var(--cb)
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-
     color: var(--cbt);
 
 }
@@ -137,7 +144,7 @@ color: var(--cb)
     width: 380px;
     height: 720px;
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(500px);    
+   backdrop-filter: blur(500px);    
     border-radius: 10px;
 
 }

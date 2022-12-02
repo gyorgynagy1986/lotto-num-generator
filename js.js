@@ -3,7 +3,7 @@ const btnClear = document.querySelector('.btn-clear');
 const yourNumbers = document.querySelectorAll('.yourNumber');
 
 let countElement = 0;
-let MaxrenderedObj = 10 ; 
+let MaxrenderedObj = 11; // - 1
 let yourNumber = [0,0,0,0,0];
 
 // CUSTUM NUMBER 
@@ -80,7 +80,7 @@ const removeAll = () => {
     document.querySelectorAll('[id=IdContainer]').forEach(el => el.remove())
     countElement = 0; 
     btn.textContent = 'Új számok'
-
+    btn.style.backgroundColor = '#47578E';
 }
 
 
@@ -98,14 +98,12 @@ function logic () {
         countElement++;
 
 
-            // LIMIT THE SPAM ELEMENTS
+        // LIMIT THE SPAM ELEMENTS
         if(countElement < MaxrenderedObj) {
          
             let create = document.createElement("div");
             create.id = 'IdContainer'
-            
-
-           
+                
         // LOOP OVER THE SORTED NUMBER AND CREATRE SPAN ELEMENT
             newArray.forEach((numbers,) => {
                 let para = document.createElement("span")
@@ -121,7 +119,8 @@ function logic () {
             console.log('hello', countElement );
             create = undefined;
             para = undefined;
-            btn.textContent =  `max ${MaxrenderedObj} szám`
+            btn.textContent =  `max ${MaxrenderedObj - 1} szám`
+            btn.style.backgroundColor = 'red';
          }
 }
     
@@ -135,14 +134,13 @@ function lottory() {
 // GENERATE NUMBER BEFORE CLICK
  lottory();     
 
-
-
-/*********************************************************************************************** */
-
 // BUTTONS 
 
 // 1. ) Add
 btn.addEventListener('click', lottory)
 // 2. ) Remove
 btnClear.addEventListener('click', removeAll); 
+
+
+
 

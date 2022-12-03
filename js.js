@@ -1,9 +1,11 @@
-const btn = document.querySelector('.btn');
-const btnClear = document.querySelector('.btn-clear');
+const btn = document.querySelector('.btn-left');
+const btnClear = document.querySelector('.btn-clear-left');
 const yourNumbers = document.querySelectorAll('.yourNumber');
+const rootContainer = document.querySelector('.root-left');
+console.log(rootContainer);
 
 let countElement = 0;
-let MaxrenderedObj = 11; // - 1
+let MaxrenderedObj = 60 // - 1
 let yourNumber = [0,0,0,0,0];
 
 // CUSTUM NUMBER 
@@ -16,19 +18,20 @@ const yourNumberHandeler = () => {
 // PREVENT SAME NUMBERS
 const preventSame = () => {
     if ( 
-        a === b || a === c || a === d ||
-        a === e || b === c || b === d || 
-        b === e || b === c || b === e ||
-        c === d || c === e)
-        console.log('caught');
-        { a + 1, b + 2, c + 3,  d + 4,  e + 5; } 
+        a === b | a === c | a === d |
+        a === e | b === c | b === d | 
+        b === e | d === c | d === e |
+        c === e)
+        console.log('caught', a, b, c, d, e);
+        { a + 1, b + 2, c + 3,  d + 4,  e + 5; }
+ 
 }
 
 // PREVENT NUMBER OVERFLOW
 const preventOverflow = () => {
     if (
-        a > 90 || b > 90 ||
-        c > 90 || d > 90 ||
+        a > 90 | b > 90 |
+        c > 90 | d > 90 |
         e > 90 )
     {
         console.log('duplicated number');
@@ -94,7 +97,7 @@ function logic () {
         order()
             
         let newArray = numbers.sort((a, b) => order(a, b))
-
+       
         countElement++;
 
 
@@ -141,6 +144,13 @@ btn.addEventListener('click', lottory)
 // 2. ) Remove
 btnClear.addEventListener('click', removeAll); 
 
-
+rootContainer.addEventListener('click', e => {
+  
+    if(e.target) {
+        const test = document.querySelectorAll('[id=IdContainer]'); 
+        test.forEach(el => console.log(el.target))
+    }
+  
+})
 
 

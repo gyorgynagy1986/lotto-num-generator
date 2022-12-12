@@ -5,13 +5,13 @@ const rootContainer = document.querySelector('.root-left');
 console.log(rootContainer);
 
 let countElement = 0;
-let MaxrenderedObj = 60 // - 1
+let MaxrenderedObj = 6 // - 1
 let yourNumber = [0,0,0,0,0];
 
 // CUSTUM NUMBER 
 const yourNumberHandeler = () => {
     yourNumbers.forEach((el, i) => {
-        yourNumber[i] = el.value;
+        yourNumber[i] = Number(el.value);
     })
 }
 
@@ -108,7 +108,7 @@ function logic () {
             create.id = 'IdContainer'
                 
         // LOOP OVER THE SORTED NUMBER AND CREATRE SPAN ELEMENT
-            newArray.forEach((numbers,) => {
+            newArray.forEach((numbers) => {
                 let para = document.createElement("span")
                 para.innerHTML = numbers;
                 create.appendChild(para)
